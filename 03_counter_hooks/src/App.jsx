@@ -12,12 +12,11 @@ function App() {
       setCounter(counter+1)
   }
   function subvalue(){
-      if(counter <= 0){
-        setCounter(counter === 0)
-        
+      if(counter > 0){
+        setCounter(counter-1)
       }
       else{
-        setCounter(counter-1)
+        setCounter(counter = 0)
       }
   }
   return (
