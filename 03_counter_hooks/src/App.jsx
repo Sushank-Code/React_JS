@@ -9,14 +9,17 @@ function App() {
   let counter_value = 0;
   let [counter, setCounter] = useState(counter_value)
   function addvalue(){
-      setCounter(counter+1)
+      setCounter(prev => prev +1)
+      setCounter(prev => prev +1)
+      setCounter(prev => prev +1)
+      
   }
   function subvalue(){
       if(counter > 0){
         setCounter(counter-1)
       }
       else{
-        setCounter(counter = 0)
+        setCounter(0)
       }
   }
   return (
