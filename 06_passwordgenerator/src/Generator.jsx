@@ -31,7 +31,7 @@ const Generator = () => {
     const copyPasswordToClipboard = useCallback(
       () => {
         pwref.current?.select()
-        // pwref.current?.setSelectionRange(0,5)  // For giving selection range
+        // pwref.current?.setSelectionRange(0,5)   // For giving selection range
         window.navigator.clipboard.writeText(password)
       },
       [password],
