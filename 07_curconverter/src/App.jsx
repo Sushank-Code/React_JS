@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { InputBox } from './components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 
@@ -22,7 +22,7 @@ const App = () => {
   const convert = () => {
     setConvertedAmount(amount * currencyInfo[to])
   }
-  return(
+  return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{
@@ -41,7 +41,7 @@ const App = () => {
               <InputBox
                 label="From"
                 amount={amount}
-                onAmountChange={(amount)=>setamount(amount)}
+                onAmountChange={(amount) => setamount(amount)}
                 currencyOption={options}
                 onCurrencyChange={(currency) => setFrom(currency)}
                 selectCurrency={from}
