@@ -1,9 +1,11 @@
 import React from 'react'
-import Accordion from './components/accordion'
+import Crousel from './components/Crousel'
 
 const App = () => {
   return (
-    <Accordion />
+    <div>
+      <Crousel />
+    </div>
   )
 }
 
