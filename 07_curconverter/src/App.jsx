@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { InputBox } from './components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
+import CurrencyBox from './components/CurrencyBox'
 
 const App = () => {
 
@@ -30,6 +31,9 @@ const App = () => {
       }}
     >
       <div className="w-full">
+        <div className='w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30 text-3xl text-black'>
+          Currency Converter
+        </div>
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
             onSubmit={(e) => {
@@ -73,6 +77,10 @@ const App = () => {
         </div>
       </div>
     </div>
+
+    // <div> Hello 
+    //   <CurrencyBox/>
+    // </div>
   );
 }
 

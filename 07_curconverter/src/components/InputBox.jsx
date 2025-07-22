@@ -1,10 +1,10 @@
 import React, { useId } from 'react'
- 
+
 function InputBox({
     label,
     amount,
     onAmountChange,                  // If user type new amount , when amount change from default
-    onCurrencyChange,               
+    onCurrencyChange,
     currencyOption = [],
     selectCurrency,
     amountDisable = false,            // Note : Needed for disabling the input box
