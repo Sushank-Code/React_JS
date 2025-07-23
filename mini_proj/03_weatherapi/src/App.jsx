@@ -1,10 +1,12 @@
 import React from 'react'
 import Weather from './components/Weather'
+import WeatherData from './components/WeatherData'
 
 const App = () => {
   return (
-    <div>App
-      <Weather/>
+    <div>
+      {/* <Weather/> */}
+      <WeatherData />
     </div>
 
   )

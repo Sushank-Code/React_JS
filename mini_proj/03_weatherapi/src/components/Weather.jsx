@@ -9,7 +9,7 @@ const Weather = () => {
         try {
             const res = await axios.get(api)
             setweather(res.data)
-            console.log(res)
+            // console.log(res)
         } catch (error) {
             console.log(error)
         }

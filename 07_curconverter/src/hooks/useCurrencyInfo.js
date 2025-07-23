@@ -23,6 +23,7 @@ function useCurrencyInfo(currency) {
     }, [currency])
     return (
         data
+        // {data} -- can be sent using destructing and also can pass loading and error
     )
 }
 
