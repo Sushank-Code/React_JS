@@ -11,7 +11,7 @@ const WeatherData = () => {
         getWeather(search)
             .then((response) => {
                 setweather(response.data)
-                // console.log(response.data)
+                console.log(response.data)
                 seterror(null)
             })
             .catch((error) => {
@@ -24,7 +24,7 @@ const WeatherData = () => {
         fetchWeather(search)
     }
     useEffect(() => {
-        fetchWeather('kathmandu')
+        fetchWeather('kathmandu')    // this load weather of kathmandu when page load
     }, [])
 
 
@@ -41,6 +41,8 @@ const WeatherData = () => {
                 <div>
                     <p>City: {weather.name}</p>
                     <p>Country: {weather.sys.country}</p>
+                    <p>Temperature: {weather.main.temp}</p>
+                    <p>Humidity: {weather.main.humidity}</p>
                 </div>
             ) : (
                 !error && <p>No city entered</p>
