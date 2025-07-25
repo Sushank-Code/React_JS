@@ -6,6 +6,7 @@ const GetData = () => {
     // console.log(getApiData())
     const [apiGet, setapiGet] = useState([])
     const [error, seterror] = useState(null)
+    const [updatedata, setupdatedata] = useState({})
 
     const fetchAPi = async () => {
         try {
@@ -37,9 +38,12 @@ const GetData = () => {
         }
     }
 
+    // handling update in api and ui
+    const handleUpdate = (val) => setupdatedata(val)
+
     return (
         <>
-            <PostData apiGet={apiGet} setapiGet={setapiGet} />
+            <PostData apiGet={apiGet} setapiGet={setapiGet} updatedata={updatedata} setupdatedata={setupdatedata} />
             <div className='flex flex-wrap justify-evenly gap-y-4 mt-10'>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
                 {
@@ -51,7 +55,8 @@ const GetData = () => {
                                     <h2 className="card-title border">{val.title}</h2>
                                     <p className='text-justify'>{val.body}</p>
                                     <div className="card-actions justify-end">
-                                        <button className="btn btn-outline btn-success">Edit</button>
+                                        <button className="btn btn-outline btn-success"
+                                            onClick={() => { handleUpdate(val) }}>Edit</button>
                                         <button className="btn btn-ghost bg-error"
                                             onClick={() => { handledelete(val.id) }}>Delete</button>
                                     </div>

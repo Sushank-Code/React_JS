@@ -13,5 +13,8 @@ export const deleteApiData = (id) => {
 }
 
 export const postApiData = (post) => {
-    return api.post(`/posts`,post)
+    return api.post(`/posts`, post)
+}
+export const updateApiData = (id, post) => {
+    return api.put(`/posts/${id}`, post)
 }
